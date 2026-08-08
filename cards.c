@@ -16,6 +16,7 @@
     scanf("%2s", card_name);
 
     int val = 0;
+    int count = 0;
     
     if (card_name[0] == 'K')
     {
@@ -39,6 +40,17 @@
     }
 
     printf("The card value is: %i\n", val);
+
+    if ((val >= 3) && (val <= 6))
+    {
+        count++;
+        puts("Count has gone up");
+    }
+    else if (val == 10)
+    {
+        count--;
+        puts("Count has gone down");
+    }
 
     return 0;
  }
