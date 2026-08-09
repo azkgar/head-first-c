@@ -18,25 +18,19 @@
     int val = 0;
     int count = 0;
     
-    if (card_name[0] == 'K')
+    switch(card_name[0])
     {
-        val = 10;
-    }
-    else if (card_name[0] == 'Q')
-    {
-        val = 10;
-    }
-    else if (card_name[0] == 'J')
-    {
-        val = 10;
-    }
-    else if (card_name[0] == 'A')
-    {
-        val = 11;
-    }
-    else
-    {
-        val = atoi(card_name);
+        case 'K':
+        case 'Q':
+        case 'J':
+            val = 10;
+            break;
+        case 'A':
+            val = 11;
+            break;
+        default:
+            val = atoi(card_name);
+            break;
     }
 
     printf("The card value is: %i\n", val);
