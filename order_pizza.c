@@ -13,10 +13,10 @@ int main (int argc, char *argv[])
         {
             case 'd':
                 delivery = optarg;
-                return;
+                break;
             case 't':
                 thick = 1;
-                return;
+                break;
             default:
                 fprintf (stderr, "Unknown option: '%s'\n", optarg);
                 return 1;
